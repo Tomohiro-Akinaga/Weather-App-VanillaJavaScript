@@ -31,7 +31,7 @@ function search() {
   };
 
 document.querySelector(".search button").addEventListener("click", function () {
-    weather.search();
+    search();
   });
 
 document.querySelector(".search-bar").addEventListener("keyup", function (event) {
