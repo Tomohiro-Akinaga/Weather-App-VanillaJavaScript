@@ -18,7 +18,7 @@ function displayWeather(data) {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
     console.log(name, icon, description, temp, humidity, speed);
-    document.querySelector(".city").innerHTML = "Weather in " + name;
+    document.querySelector(".city").innerHTML = name;
     document.querySelector(".icon").src="http://openweathermap.org/img/wn/" + icon + "@2x.png";
     document.querySelector(".description").innerHTML = description;
     document.querySelector(".temp").innerHTML = temp + "℃";
