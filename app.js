@@ -24,8 +24,9 @@ function displayWeather(data) {
     document.querySelector(".temp").innerHTML = temp + "℃";
     document.querySelector(".humidity").innerHTML = "humidity: " + humidity + "%";
     document.querySelector(".wind").innerHTML = "Wind Speed " + speed + " km/h";
-};
-  
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
+}
+
 function search() {
     fetchWeather(document.querySelector(".search-bar").value);
   };
@@ -39,5 +40,5 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
         search();
       }
 });
- 
+
 fetchWeather("Vancouver");
