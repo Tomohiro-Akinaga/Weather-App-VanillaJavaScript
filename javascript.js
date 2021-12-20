@@ -6,7 +6,7 @@ function clickEnter(eventObject) {
     if (eventObject.key === "Enter") {
         fetchBackground();
     }
-}
+};
 
 
 function fetchBackground() {
@@ -23,10 +23,6 @@ function fetchBackground() {
             return console.log("error");
         });
     
-    document.body.innerHTML = 
-    "<p>loading</p>";
-    
-    window.addEventListener('load', displayBackground);
     function displayBackground(weather) {
         const i = Math.floor(Math.random() * 10);
         const background = weather.results[i].links.download;
