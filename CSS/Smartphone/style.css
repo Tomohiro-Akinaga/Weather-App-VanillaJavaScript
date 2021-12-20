@@ -1,6 +1,9 @@
 @media (max-width: 780px) {
   body {
-    background-size: 200%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

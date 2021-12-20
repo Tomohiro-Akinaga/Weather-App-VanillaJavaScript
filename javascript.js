@@ -1,27 +1,36 @@
 // Click the search button
-document.getElementById("button").addEventListener("click", searchWeatherCondition);
+document.getElementById("button").addEventListener("click", fetchBackground);
+document.getElementById("input").addEventListener("keydown", clickEnter);
 
-function searchWeatherCondition() {
+function clickEnter(eventObject) {
+    if (eventObject.key === "Enter") {
+        fetchBackground();
+    }
+}
+
+
+function fetchBackground() {
     const weather = document.getElementById("input").value;
-    const APIURL = "https://api.unsplash.com/search/photos?query=" + weather + "&client_id=n-Mbim4tzmenTZYgEXI7p8y0-XLnX-ItwFCLhh-lOaw"
+    const APIURL = "https://api.unsplash.com/search/photos?query=" + weather +"&client_id=n-Mbim4tzmenTZYgEXI7p8y0-XLnX-ItwFCLhh-lOaw"
     fetch(APIURL)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            return displayBackgounrd(data);
+            return displayBackground(data);
         })
         .catch(error => {
             return console.log("error");
         });
     
-    function displayBackgounrd(weather) {
-        const background = weather.results[0].links.download;
-        // console.log(background);
-        // alert(background);
-        document.body.style.backgroundImage = "url(background)" ;      
+    document.body.innerHTML = 
+    "<p>loading</p>";
+    
+    window.addEventListener('load', displayBackground);
+    function displayBackground(weather) {
+        const i = Math.floor(Math.random() * 10);
+        const background = weather.results[i].links.download;
+        document.body.style.backgroundImage = "url(" + background + ")"; 
+
     };
 };
-
-
-// document.body.style.backgroundImage = "url('https://unsplash.com/photos/1YHXFeOYpN0/download?ixid=MnwyNzQ3MTB8MHwxfHNlYXJjaHwxfHxyYWlufGVufDB8fHx8MTYzOTg5OTA4Mg')";      
