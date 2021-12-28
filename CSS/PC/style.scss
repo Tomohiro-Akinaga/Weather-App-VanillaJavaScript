@@ -1,3 +1,11 @@
 body {
     background-size: cover;
 }
+
+.input {
+    width: 50%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
