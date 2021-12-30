@@ -1,3 +1,5 @@
+"use strict";
+
 // Call API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
 headers.append("X-CSCAPI-KEY", "T2JNanhMaDNoRkp4eU5HbEZ4T2pVZHpQQktVZ0NHN216N2V5aHBWYQ==");
@@ -8,17 +10,18 @@ const requestOptions = {
     refirect: "follow"
 };
 
-async function callapi() {
-    const res = await fetch("https://api.countrystatecity.in/v1/countries", requestOptions);
-    const data = await res.json();
-    console.log(data);
-};
-callapi();
+const url = "https://api.countrystatecity.in/v1/countries";
 
 
 
 
+async function fetchCities() {
+    const request = await fetch(url, requestOptions);
+    const json = request.json();
+    json.
 
+
+fetchCities();
 
 
 
