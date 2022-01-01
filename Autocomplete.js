@@ -1,6 +1,6 @@
 "use strict";
 
-// Call API in https://countrystatecity.in/docs/api/all-countries/
+// Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
 headers.append("X-CSCAPI-KEY", "T2JNanhMaDNoRkp4eU5HbEZ4T2pVZHpQQktVZ0NHN216N2V5aHBWYQ==");
 
@@ -12,16 +12,23 @@ const requestOptions = {
 
 const url = "https://api.countrystatecity.in/v1/countries";
 
+// Call API
+async function callApi() {
+    const data = await fetch(url, requestOptions);
+    const response = data.json();
+    console.log(response);
+};
+
+callApi();
 
 
 
-async function fetchCities() {
-    const request = await fetch(url, requestOptions);
-    const json = request.json();
-    json.
 
 
-fetchCities();
+// const callApi = fetch(url, requestOptions).then(res => res.json());
+// console.log(callApi);
+
+
 
 
 
