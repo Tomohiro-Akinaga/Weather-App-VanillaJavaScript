@@ -10,27 +10,47 @@ const requestOptions = {
     refirect: "follow"
 };
 
-const url = "https://api.countrystatecity.in/v1/countries";
+const countryURL = "https://api.countrystatecity.in/v1/countries";
+const stateURL = "https://api.countrystatecity.in/v1/states";
 
 // Call API
-async function callApi() {
-    const data = await fetch(url, requestOptions);
-    const response = data.json();
-    console.log(response);
+const countryAndCity = [];
+
+async function callCountryAPI() {
+    const countryData = await fetch(countryURL, requestOptions).then(res => res.json());
+    for ( let i = 0; i < countryData.length; i++ ) {
+        countryAndCity.push(countryData[i].name);
+    }
 };
 
-callApi();
+async function callStateAPI() {
+    const stateData = await fetch(stateURL, requestOptions).then(res => res.json());
+    for ( let i = 0; i < stateData.length; i++ ) {
+        countryAndCity.push(stateData[i].name);
+    }
+}
 
+// Manipulate DOM and Execute async function synchronously
+window.onload = function () {
 
+    const input = document.getElementById("input");
+    const datalist = document.getElementById("name-list");
+    
+    async function syncFunc() {
+        await callCountryAPI();
+        // console.log(countryAndCity);
+        await callStateAPI();
+        // console.log(countryAndCity);
+        input.addEventListener("input", autocomplete);
+    };
 
+    syncFunc();
 
+};
 
-// const callApi = fetch(url, requestOptions).then(res => res.json());
-// console.log(callApi);
-
-
-
-
+function autocomplete() {
+    console.log(input);
+}
 
 // function countryData(jsonData) {
 
