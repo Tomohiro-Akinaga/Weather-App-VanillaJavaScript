@@ -34,7 +34,6 @@ async function callStateAPI() {
 
 // Manipulate DOM and Execute async function synchronously
 window.onload = function () {
-
     const input = document.getElementById("input");
     const datalist = document.getElementById("name-list");
     
@@ -46,67 +45,20 @@ window.onload = function () {
     };
 
     syncFunc();
-
 };
 
 function autocomplete() {
-    console.log(input);
-}
-
-// function countryData(jsonData) {
-
-//     for ( let i = 0; i < jsonData.length; i++ ) {
-//         array.push(jsonData[i].name)
-//     }  
-
-// };
-
-// Fetch the state data
-// fetch("https://api.countrystatecity.in/v1/states", requestOptions)
-//     .then(response => {
-//         return response.json()
-//     })
-//     .then(data => {
-//         return stateData(data);
-//     })
-//     .catch(error => {
-//         return console.log(error);
-//     });
-
-// function stateData(jsonData) {
-
-//     for ( let i = 0; i < jsonData.length; i++ ) {
-//         array.push(jsonData[i].name)
-//     } 
-    
-// };
-// console.log(array);
-// Autocomplete function from below
-// window.onload = function () {
-//     const input = document.getElementById("input");
-//     input.addEventListener("input", autocomplete);
-// };
-
-
-// function autocomplete() {
-    
-//     const suggestArray = [];
-//     const datalist = document.getElementById("name-list");
-//     datalist.innerHTML = "";
-
-
-//     array.forEach(element => {
-
-//         // In case of not including space
-//         if ( element.includes(' ') === false ) {
-//             const str1 = element.charAt(0).toLowerCase() + element.slice(1);
-//             if ( str1.startsWith(input.value) && input.value.length > 0 ) {
-//                 console.log(element);
-//             }
-//         } else {
-//             ;
-//         }
+    const suggestArray = [];
+    const keyword = input.value;
+    if ( keyword.includes(' ') === false && keyword.length > 0 ) {
+        const keywordNoSpace = keyword.charAt(0).toUpperCase() + keyword.slice(1);
         
-//     });
-   
-// };
+        countryAndCity.forEach(item => {
+            if ( item.startsWith(keywordNoSpace) ) {
+                suggestArray.push(item);
+            }
+        })
+
+    }
+    console.log(suggestArray);
+};
