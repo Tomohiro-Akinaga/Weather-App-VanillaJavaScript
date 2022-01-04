@@ -1,10 +1,8 @@
 "use strict";
 
-export function startLoading() {
-    document.body.style.backgroundColor = "black";
-};
-
 export function finishLoading() {
-    document.body.style.backgroundColor = "white";
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+    const container = document.getElementById("container");
+    container.classList.add("container");
 };
-

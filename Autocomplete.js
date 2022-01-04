@@ -1,6 +1,6 @@
 "use strict";
 
-import { startLoading, finishLoading } from "./Loading.js";
+import { finishLoading } from "./Loading.js";
 
 // Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
@@ -39,11 +39,8 @@ window.onload = function () {
     const datalist = document.getElementById("name-list");
     
     async function syncFunc() {
-        startLoading();
         await callCountryAPI();
-        // console.log(countryAndCity);
         await callStateAPI();
-        // console.log(countryAndCity);
         finishLoading();
         input.addEventListener("input", autocomplete);
     };
