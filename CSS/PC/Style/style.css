@@ -1,34 +1,16 @@
 body {
-  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
 }
 
 .input {
   width: 50%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 input::-webkit-calendar-picker-indicator {
   display: none !important;
-}
-
-.container {
-  animation: fadeIn 3s ease 0 1 normal;
-  -webkit-animation: fadeIn 3s ease 0 1 normal;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 /*# sourceMappingURL=style.css.map */

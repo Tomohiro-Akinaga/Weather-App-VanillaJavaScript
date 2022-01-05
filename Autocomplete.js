@@ -60,7 +60,7 @@ function autocomplete() {
     const keyword = input.value;
 
     // In case that input keyword doesn't include space. E.g Mexico, Japan, Tokyo.
-    if ( keyword.includes(' ') === false && keyword.length > 0 ) {
+    if ( keyword.includes(" ") === false && keyword.length > 0 ) {
         const keywordNoSpace = keyword.charAt(0).toUpperCase() + keyword.slice(1);
         
         countryAndCity.forEach(item => {
@@ -77,5 +77,36 @@ function autocomplete() {
     }
 
     // In case that input keyword does include space. E.g New Zealand, New York, Kanagawa Prefecture.
-    
+    if ( keyword.includes(" ") === true && keyword.length > 0 ) {
+        const keywordRemoveSpace = keyword.split(" ").join("");
+        
+        countryAndCity.forEach(item => {
+            if ( item.includes(" ") ) {
+                const array = [];
+                const countryAndCitySplit = item.split(" ");
+                
+                countryAndCitySplit.forEach(word => {
+                    array.push(word.charAt(0).toLowerCase() + word.slice(1));
+                });
+
+                const countryCityRemoveSpace = array.join("");
+                
+                if ( countryCityRemoveSpace.startsWith(keywordRemoveSpace) ) {
+                    suggestArray.push(item);
+                }
+                
+            } else if ( item.includes(' ') === false ) {
+                ;
+            } else {
+                ;
+            }
+        });
+        
+        for ( let i = 0; i < 9; i++ ) {
+            const option = document.createElement("option");
+            option.value = suggestArray[i];
+            datalist.appendChild(option);
+        }
+        
+    }
 };
