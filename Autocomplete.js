@@ -1,6 +1,7 @@
 "use strict";
 
 import { finishLoading } from "./Loading.js";
+import { submitForm } from "./OpenWeatherAPI.js";
 
 // Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
@@ -45,6 +46,7 @@ window.onload = function () {
         await callStateAPI();
         finishLoading();
         input.addEventListener("input", autocomplete);
+        submitForm();
     };
 
     syncFunc();
