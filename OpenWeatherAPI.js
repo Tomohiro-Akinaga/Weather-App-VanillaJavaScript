@@ -1,8 +1,10 @@
 "use strict";
 
+import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
+// import { startLoading } from "./Loading.js";
+
 // When clicked form
 export function submitForm() {
-    // const cityName = input.value;
     
     const form = document.getElementById("form");
     form.addEventListener("submit", (event) => {
@@ -12,7 +14,9 @@ export function submitForm() {
             alert("Use country name or state name");
         } else {
             event.preventDefault();
+            // startLoading();
             callCurrentWeather(cityName);
+            fetchBackgroundImage(cityName);
         }
     });
 };
