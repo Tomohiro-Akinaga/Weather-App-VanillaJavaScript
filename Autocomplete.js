@@ -45,6 +45,7 @@ window.onload = function () {
     async function syncFunc() {
         await callCountryAPI();
         await callStateAPI();
+        await fetchBackgroundImage("Canada");
         finishLoading();
         input.addEventListener("input", autocomplete);
         submitForm();

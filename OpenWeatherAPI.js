@@ -1,7 +1,7 @@
 "use strict";
 
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
-// import { startLoading } from "./Loading.js";
+// import { startLoading, finishLoading } from "./Loading.js";
 
 // When clicked form
 export function submitForm() {
@@ -17,6 +17,7 @@ export function submitForm() {
             // startLoading();
             callCurrentWeather(cityName);
             fetchBackgroundImage(cityName);
+            // finishLoading();
         }
     });
 };

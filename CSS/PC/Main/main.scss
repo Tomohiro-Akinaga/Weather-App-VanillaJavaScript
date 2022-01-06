@@ -4,18 +4,25 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "Poppins";
-    color: rgb(74, 74, 74);
 }
 
+//Body
 body {
-    background-image: url();
+    background-size: cover;
 }
 
-// Search bar
+//Main
+.container {
+    padding-top: 30px;
+    height: 100vh;
+    backdrop-filter: brightness(50%);
+    
+}
+
 .form {
-    border: solid 2px #c9c9c9;
+    // border: solid 2px #c9c9c9;
     border-radius: 50px;
-    margin: 30px auto 0px auto  ;
+    margin: 0px auto  ;
     padding-left: 30px;
     padding-right: 100px;
     position: relative;
@@ -32,6 +39,7 @@ body {
 
     &::placeholder {
         opacity: 50%;
+        color: black;
     }
 
     &:-webkit-autofill {
@@ -46,7 +54,7 @@ body {
 .button {
     position: absolute;
     top: 0px;
-    left: 410px;
+    left: 415px;
     height: 40px;
     border: none;
     border-top-right-radius: 50px;
@@ -61,10 +69,23 @@ body {
         background-color: #d7d7d7;
         cursor: pointer;
     }
+
+    &:active {
+        background-color: #c1c1c1;
+    }
 }
 
 .fa-search {
     font-size: 1.4rem;
     font-family: "Font Awesome 5 Free";
     color: rgb(159, 159, 159);
+}
+
+.copyright {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
 }

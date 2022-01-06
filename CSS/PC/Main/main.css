@@ -4,17 +4,22 @@
           box-sizing: border-box;
   margin: 0;
   font-family: "Poppins";
-  color: #4a4a4a;
 }
 
 body {
-  background-image: url();
+  background-size: cover;
+}
+
+.container {
+  padding-top: 30px;
+  height: 100vh;
+  -webkit-backdrop-filter: brightness(50%);
+          backdrop-filter: brightness(50%);
 }
 
 .form {
-  border: solid 2px #c9c9c9;
   border-radius: 50px;
-  margin: 30px auto 0px auto;
+  margin: 0px auto;
   padding-left: 30px;
   padding-right: 100px;
   position: relative;
@@ -31,18 +36,23 @@ body {
 }
 .input::-webkit-input-placeholder {
   opacity: 50%;
+  color: black;
 }
 .input::-moz-placeholder {
   opacity: 50%;
+  color: black;
 }
 .input:-ms-input-placeholder {
   opacity: 50%;
+  color: black;
 }
 .input::-ms-input-placeholder {
   opacity: 50%;
+  color: black;
 }
 .input::placeholder {
   opacity: 50%;
+  color: black;
 }
 .input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset;
@@ -55,7 +65,7 @@ body {
 .button {
   position: absolute;
   top: 0px;
-  left: 410px;
+  left: 415px;
   height: 40px;
   border: none;
   border-top-right-radius: 50px;
@@ -71,10 +81,22 @@ body {
   background-color: #d7d7d7;
   cursor: pointer;
 }
+.button:active {
+  background-color: #c1c1c1;
+}
 
 .fa-search {
   font-size: 1.4rem;
   font-family: "Font Awesome 5 Free";
   color: #9f9f9f;
+}
+
+.copyright {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
