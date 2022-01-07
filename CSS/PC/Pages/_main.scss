@@ -1,17 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
+/* common */
+
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: "Poppins";
 }
 
-//Body
+
 body {
     background-size: cover;
 }
 
-//Main
+ul {
+    list-style: none;
+}
+
+/* Container common */
 .container {
     padding-top: 30px;
     height: 100vh;
@@ -19,6 +25,7 @@ body {
     color: #fff;
 }
 
+/* Search Bar */
 .container--form {
     // border: solid 2px #c9c9c9;
     border-radius: 50px;
@@ -81,6 +88,47 @@ body {
     color: rgb(159, 159, 159);
 }
 
+/* Container box */
+.container--box {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container--box__current {
+    display: flex;
+    width: 100%;
+    
+    &__left {
+        text-align: center;
+        width: 50%;
+    }
+
+    &__right {
+        text-align: center;
+        width: 50%;
+    }
+
+}
+
+.container--box__forecast__bar {
+    
+    & ul {
+        padding: 0px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+}
+
+.container--box__forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Container copyright*/
 .container--copyright {
     display: inline-block;
     width: 100%;

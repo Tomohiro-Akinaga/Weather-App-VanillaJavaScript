@@ -12,15 +12,65 @@
     <div id="loading" class="loading">
         <div class="spinner"></div>
     </div>
-    <div id="container" class="container">
+    <div class="container">
         <form action="" id="form" class="container--form">
             <input type="text" id="input" class="container--input" autocomplete="on" list="name-list" placeholder="Search by country or state">
             <button id="button" class="container--button"><i class="fas fa-search"></i></button>
             <datalist id ="name-list"></datalist>
         </form>
-        <div class="container--item__current">
-            <p class="city-name">Canada</p>
-            <p class="today-date">January 6, 2022</p>
+        <div class="container--box">
+            <div class="container--box__current">
+                <div class="container--box__current__left">
+                    <p class="container--city-name">Canada</p>
+                    <p class="container--today-date">January 6, 2022</p>
+                    <img class="container--img__today" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                </div>
+                <div class="container--box__current__right">
+                    <p class="container--temperature__today">5&#8451;</p>
+                    <p class="container--temperature__max-min">6&#8451; / 4&#8451;</p>
+                </div>
+            </div>
+            <div class="container--box__forecast__bar">
+                <nav>
+                    <ul>
+                        <li class="container--nav-item active"><a href="#">Description</a></li>
+                        <li class="container--nav-item"><a href="#">Hourly</a></li>
+                        <li class="container--nav-item"><a href="#">Daily</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container--box__forecast">
+                <div class="container--item__hourly">
+                    <p class="container--time">0pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+                <div class="container--item__hourly">
+                    <p class="container--time">1pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+                <div class="container--item__hourly">
+                    <p class="container--time">2pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+                <div class="container--item__hourly">
+                    <p class="container--time">3pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+                <div class="container--item__hourly">
+                    <p class="container--time">4pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+                <div class="container--item__hourly">
+                    <p class="container--time">5pm</p>
+                    <img class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <p class="container--temperature__hourly">6&#8451;</p>
+                </div>
+            </div>
         </div>
         <p class="container--copyright">Copyright &copy; 2022 Tomohiro Akinaga, All Rights Reserved.</p>
     </div>
