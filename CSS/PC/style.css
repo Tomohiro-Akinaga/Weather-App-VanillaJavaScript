@@ -260,17 +260,19 @@ ul {
 .container--box__forecast__bar ul a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.5rem;
 }
 
-.container--nav-item.active {
-  padding: 0 30px;
+.container--nav-item {
+  padding: 0 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
-.container--nav-item.active::after {
-  background-color: #fff;
-  border-radius: 50px;
-  content: "";
-  display: block;
-  height: 3px;
+.container--nav-item.active {
+  border-bottom: solid 4px #fff;
+}
+.container--nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.235);
 }
 
 .container--box__forecast {
@@ -285,6 +287,14 @@ ul {
 .container--item__hourly {
   text-align: center;
 }
+.container--item__hourly img {
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.container--time__hourly {
+  font-size: 1.5rem;
+}
 
 /* Container copyright*/
 .container--copyright {
@@ -292,6 +302,7 @@ ul {
   width: 100%;
   text-align: center;
   position: fixed;
-  bottom: 0;
+  bottom: 5px;
+  color: rgba(255, 255, 255, 0.639);
 }
 /*# sourceMappingURL=style.css.map */

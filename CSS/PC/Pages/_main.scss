@@ -23,6 +23,7 @@ ul {
     padding-top: 30px;
     height: 100vh;
     backdrop-filter: brightness(50%);
+    // backdrop-filter: blur(5px);
     color: #fff;
 }
 
@@ -169,21 +170,21 @@ ul {
         & a {
             text-decoration: none;
             color: #fff;
+            font-size: 1.5rem;
         }
     }
 }
 
 .container--nav-item {
-    &.active {
-        padding: 0 30px;
+    padding: 0 20px;
+    transition: all 0.2s;
 
-        &::after {
-            background-color: #fff;
-            border-radius: 50px;
-            content: "";
-            display: block;
-            height: 3px;
-        }
+    &.active {
+        border-bottom: solid 4px #fff;
+    }
+
+    &:hover {
+        background-color: $forecast-bar-hover;
     }
 }
 
@@ -194,7 +195,20 @@ ul {
 
 .container--item__hourly {
     text-align: center;
+
+    & img {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    }
+
 }
+
+.container--time__hourly {
+    font-size: 1.5rem;
+}
+
+// .container--img__hourly {
+
+// }
 
 /* Container copyright*/
 .container--copyright {
@@ -202,5 +216,6 @@ ul {
     width: 100%;
     text-align: center;
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
+    color: $copyright;
 }
