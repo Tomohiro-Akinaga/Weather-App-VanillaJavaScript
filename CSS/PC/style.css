@@ -242,10 +242,12 @@ ul {
 }
 
 /* Container box forecast*/
+.container--box__forecast__bar {
+  margin-bottom: 20px;
+}
 .container--box__forecast__bar nav {
   border-bottom: solid 4px rgba(255, 255, 255, 0.201);
   width: 100%;
-  margin-bottom: 20px;
 }
 .container--box__forecast__bar ul {
   padding: 0px;
@@ -259,20 +261,23 @@ ul {
 }
 .container--box__forecast__bar ul a {
   text-decoration: none;
-  color: #fff;
   font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.632);
 }
 
 .container--nav-item {
   padding: 0 20px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .container--nav-item.active {
   border-bottom: solid 4px #fff;
 }
-.container--nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.235);
+.container--nav-item.active a {
+  color: #fff;
+}
+.container--nav-item:hover a {
+  color: #fff;
 }
 
 .container--box__forecast {
@@ -286,10 +291,6 @@ ul {
 
 .container--item__hourly {
   text-align: center;
-}
-.container--item__hourly img {
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
 .container--time__hourly {
