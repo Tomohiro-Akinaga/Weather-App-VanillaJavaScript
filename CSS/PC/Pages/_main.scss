@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import "_variables.scss";
 
 /* common */
 
@@ -68,34 +69,34 @@ ul {
     border-bottom-right-radius: 50px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    background-color: #efefef;
+    background-color: $background-color;
     width: 86px;
     transition: 0.2s;
 
     &:hover {
-        background-color: #d7d7d7;
+        background-color: $background-color-hover;
         cursor: pointer;
     }
 
     &:active {
-        background-color: #c1c1c1;
+        background-color: $background-color-active;
     }
 }
 
 .fa-search {
     font-size: 1.4rem;
     font-family: "Font Awesome 5 Free";
-    color: rgb(159, 159, 159);
+    color: $fa-search;
 }
 
 /* Container box */
-.container--box {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-}
+// .container--box {
+//     // margin-top: 20px;
+//     display: flex;
+//     flex-direction: column;
+// }
 
-
+/* Container box current */
 .container--box__current {
     display: flex;
     width: 100%;
@@ -103,29 +104,91 @@ ul {
     &__left {
         text-align: center;
         width: 50%;
+
     }
 
     &__right {
+        align-content: flex-start;
         text-align: center;
         width: 50%;
     }
 
 }
 
-.container--box__forecast__bar {
+.container--city-name {
+    font-size: 4.0rem;
+}
+
+.container--today-date {
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+
+.container--img__today {
+    width: 200px;
+}
+
+.container--temperature {
     
+    &__today {
+        font-size: 10rem;
+        font-weight: 300;
+    }
+
+    &__max {
+        color: $max-temp-color;
+        font-size: 4.0rem;
+        font-weight: 300;
+    }
+
+    &__slash {
+        font-size: 3.0rem;
+        font-weight: 300;
+    }
+
+    &__min {
+        color: $min-temp-color;
+        font-size: 4.0rem;
+        font-weight: 300;
+    }
+}
+
+/* Container box forecast*/
+.container--box__forecast__bar {
+
+
     & ul {
         padding: 0px;
         display: flex;
         width: 100%;
         justify-content: space-around;
-        margin: 20px 0;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+
+        & a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.container--nav-item {
+    &.active {
+        padding: 0 30px;
+
+        &::after {
+            background-color: #fff;
+            border-radius: 50px;
+            content: "";
+            display: block;
+            height: 3px;
+        }
     }
 }
 
 .container--box__forecast {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /* Container copyright*/
