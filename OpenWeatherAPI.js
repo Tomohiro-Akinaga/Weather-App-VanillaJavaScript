@@ -3,7 +3,13 @@
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
 // import { startLoading, finishLoading } from "./Loading.js";
 
-// When clicked form
+/* Finish DOM tree construction */
+window.onload = function () {
+    const containerCityName = document.getElementById("container--city-name");
+    console.log(containerCityName);
+}
+
+/* When clicked form */
 export function submitForm() {
     
     const form = document.getElementById("form");
