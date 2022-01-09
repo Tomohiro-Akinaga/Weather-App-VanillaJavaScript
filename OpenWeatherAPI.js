@@ -3,11 +3,7 @@
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
 // import { startLoading, finishLoading } from "./Loading.js";
 
-/* Finish DOM tree construction */
-window.onload = function () {
-    const containerCityName = document.getElementById("container--city-name");
-    console.log(containerCityName);
-}
+
 
 /* When clicked form */
 export function submitForm() {
@@ -33,7 +29,12 @@ function callCurrentWeather(text) {
     const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + text +"&appid=7d20d69e5d5abc8385c9ae6416019816";
     async function currentWeatherApi() {
         const currentWeatherData = await fetch(currentWeatherUrl).then(res => res.json());
-        console.log(currentWeatherData);
+        
+        /* Manipulate DOM tree */
+        const containerCityName = document.getElementById("container--city-name");
+        containerCityName.innerText = text;
+
+
     };
     currentWeatherApi();
 };
