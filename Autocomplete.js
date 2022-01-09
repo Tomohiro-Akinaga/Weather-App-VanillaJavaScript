@@ -3,6 +3,7 @@
 import { finishLoading } from "./Loading.js";
 import { submitForm } from "./OpenWeatherAPI.js";
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
+import { displayTime } from "./DisplayTime.js";
 
 // Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
@@ -41,6 +42,7 @@ async function callStateAPI() {
 // Manipulate DOM and Execute async function synchronously
 window.onload = function () {
 
+    displayTime();
     const input = document.getElementById("input");
     async function syncFunc() {
         await callCountryAPI();

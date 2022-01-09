@@ -3,8 +3,6 @@
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
 // import { startLoading, finishLoading } from "./Loading.js";
 
-
-
 /* When clicked form */
 export function submitForm() {
     
@@ -24,7 +22,7 @@ export function submitForm() {
     });
 };
 
-// Call the current weather API
+/* Call the current weather API */
 function callCurrentWeather(text) {
     const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + text +"&appid=7d20d69e5d5abc8385c9ae6416019816";
     async function currentWeatherApi() {
