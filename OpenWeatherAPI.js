@@ -23,13 +23,14 @@ export function submitForm() {
 };
 
 /* Call the current weather API */
+callCurrentWeather("Canada");
 function callCurrentWeather(text) {
     const currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + text +"&units=metric&appid=7d20d69e5d5abc8385c9ae6416019816";
     async function currentWeatherApi() {
         const currentWeatherData = await fetch(currentWeatherUrl).then(res => res.json());
         console.log(currentWeatherData);
 
-        /* Manipulate DOM tree */
+        /* Manipulate DOM */
         const containerCityName = document.getElementById("container--city-name");
         const containerImgToday = document.getElementById("container--img__today");
         const containerTemperatureToday = document.getElementById("container--temperature__today");
@@ -40,8 +41,27 @@ function callCurrentWeather(text) {
         containerTemperatureToday.innerText = Math.round(currentWeatherData.main.temp) + "°";
         containerTemperatureMax.innerText = Math.round(currentWeatherData.main.temp_max) + "°";
         containerTemperatureMin.innerText = Math.round(currentWeatherData.main.temp_min) + "°";
+
+        /* Get lat and lon data for calling weather forecast API */
+        const lat = currentWeatherData.coord.lat;
+        const lon = currentWeatherData.coord.lon;
+        await callWeatherForecastAPI(lat, lon);
     };
     currentWeatherApi();
 };
 
-callCurrentWeather("Canada");
+async function callWeatherForecastAPI(latitude, longitude) {
+    const weatherForecastUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=7d20d69e5d5abc8385c9ae6416019816";
+    const weatherForecastData = await fetch(weatherForecastUrl).then(res => res.json());
+    console.log(weatherForecastData);
+    const todayDate = new Date();
+    const time = todayDate.getHours();
+    // if ( time <= 12 ) {
+    //     const ampm = time + "am";
+    // } else if (time > 12 ) {
+    //     const ampm = (time - 12) + "pm";
+    // }
+    const containerTimeHourly = document.getElementById("container--time__hourly");
+    containerTimeHourly.innerText = time;
+};
+
