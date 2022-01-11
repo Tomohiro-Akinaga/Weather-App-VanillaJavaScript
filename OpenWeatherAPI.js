@@ -61,6 +61,31 @@ async function callWeatherForecast(latitude, longitude) {
 /* Apply the forecast data to HTML */
 function applyWeatherForecast(jsonData) {
     console.log(jsonData);
+    const imgHourlyPlus0 = document.getElementById("container--img__hourly__now");
+    const imgHourlyPlus1 = document.getElementById("container--img__hourly__plus1");
+    const imgHourlyPlus2 = document.getElementById("container--img__hourly__plus2");
+    const imgHourlyPlus3 = document.getElementById("container--img__hourly__plus3");
+    const imgHourlyPlus4 = document.getElementById("container--img__hourly__plus4");
+    const imgHourlyPlus5 = document.getElementById("container--img__hourly__plus5");
+    imgHourlyPlus0.src = `http://openweathermap.org/img/wn/${jsonData.hourly[0].weather[0].icon}@2x.png`;
+    imgHourlyPlus1.src = `http://openweathermap.org/img/wn/${jsonData.hourly[1].weather[0].icon}@2x.png`;
+    imgHourlyPlus2.src = `http://openweathermap.org/img/wn/${jsonData.hourly[2].weather[0].icon}@2x.png`;
+    imgHourlyPlus3.src = `http://openweathermap.org/img/wn/${jsonData.hourly[3].weather[0].icon}@2x.png`;
+    imgHourlyPlus4.src = `http://openweathermap.org/img/wn/${jsonData.hourly[4].weather[0].icon}@2x.png`;
+    imgHourlyPlus5.src = `http://openweathermap.org/img/wn/${jsonData.hourly[5].weather[0].icon}@2x.png`;
+
+    const temperatureHourly0 = document.getElementById("container--temperature__hourly__now");
+    const temperatureHourly1 = document.getElementById("container--temperature__hourly__1");
+    const temperatureHourly2 = document.getElementById("container--temperature__hourly__2");
+    const temperatureHourly3 = document.getElementById("container--temperature__hourly__3");
+    const temperatureHourly4 = document.getElementById("container--temperature__hourly__4");
+    const temperatureHourly5 = document.getElementById("container--temperature__hourly__5");
+    temperatureHourly0.innerText = Math.round(jsonData.hourly[0].temp) + "°";
+    temperatureHourly1.innerText = Math.round(jsonData.hourly[1].temp) + "°";
+    temperatureHourly2.innerText = Math.round(jsonData.hourly[2].temp) + "°";
+    temperatureHourly3.innerText = Math.round(jsonData.hourly[3].temp) + "°";
+    temperatureHourly4.innerText = Math.round(jsonData.hourly[4].temp) + "°";
+    temperatureHourly5.innerText = Math.round(jsonData.hourly[5].temp) + "°";
 };
 
 /* Execute the function for Canada keyword as default*/

@@ -160,6 +160,7 @@ ul {
     & nav {
         border-bottom: solid 4px $underbar-color;
         width: 100%;
+
     }
 
     & ul {
@@ -184,15 +185,19 @@ ul {
     &.active {
         border-bottom: solid 4px #fff;
         
-
         & a {
             color: #fff;
+
+
         }
+
+
     }
 
     &:hover {  
         & a {
             color: #fff;
+
         }
     }
 }
