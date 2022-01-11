@@ -1,9 +1,9 @@
 "use strict";
 
-import { finishLoading } from "./Loading.js";
-import { submitForm } from "./OpenWeatherAPI.js";
+import { displayTime } from "./displayTime.js";
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
-import { displayTime } from "./DisplayTime.js";
+import { finishLoading } from "./loading.js";
+import { submitForm } from "./openWeatherAPI.js";
 
 // Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();

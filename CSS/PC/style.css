@@ -185,6 +185,7 @@ ul {
 
 .container--city-name {
   font-size: 4rem;
+  flex-wrap: wrap;
 }
 
 .container--today-date {
