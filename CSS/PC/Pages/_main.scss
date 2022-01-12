@@ -171,6 +171,10 @@ ul {
         justify-content: space-around;
         font-size: 1.3rem;
 
+        & li {
+            width: 33%;
+            text-align: center;
+        }
     }
 }
 
@@ -239,6 +243,39 @@ ul {
 .container--temperature__daily {
     font-size: 1.5rem;
 }
+
+/* Description */
+.container--box__desc {
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+
+    &__upper {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    &__lower {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
+
+.container--item__desc {
+    text-align: center;
+    width: 33%;
+
+    &__sub-title {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    &__text {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* Container copyright*/
 .container--copyright {

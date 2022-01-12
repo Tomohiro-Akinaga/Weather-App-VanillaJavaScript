@@ -235,6 +235,10 @@ ul {
   justify-content: space-around;
   font-size: 1.3rem;
 }
+.container--box__forecast__bar ul li {
+  width: 33%;
+  text-align: center;
+}
 
 .container--nav-item {
   padding: 0 20px;
@@ -292,6 +296,34 @@ ul {
 }
 
 .container--temperature__daily {
+  font-size: 1.5rem;
+}
+
+/* Description */
+.container--box__desc {
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+}
+.container--box__desc__upper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.container--box__desc__lower {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container--item__desc {
+  text-align: center;
+  width: 33%;
+}
+.container--item__desc__sub-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.container--item__desc__text {
   font-size: 1.5rem;
 }
 

@@ -97,9 +97,9 @@ function applyWeatherForecastHourly(jsonDataHourly) {
 /* undisplay daily and desc */
 function undisplay() {
     const navItemDaily = document.getElementById("container--box__daily");
-    // const navItemDesc = document.getElementById("container--box__desc");    
+    const navItemDesc = document.getElementById("container--box__desc");    
     navItemDaily.style.display = "none";
-    // navItemDesc.style.display = "none";
+    navItemDesc.style.display = "none";
 };
 
 /* Apply the forecast daily data to HTML */
