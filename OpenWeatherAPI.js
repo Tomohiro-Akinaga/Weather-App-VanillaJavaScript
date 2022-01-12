@@ -58,11 +58,12 @@ async function callWeatherForecast(latitude, longitude) {
     const weatherForecastData = await fetch(weatherForecastUrl).then(res => res.json());
     applyWeatherForecastHourly(weatherForecastData);
     applyWeatherForecastDaily(weatherForecastData);
-    // applyWeatherForecastDesc(weatherForecastData);
+    applyWeatherForecastDesc(weatherForecastData);
 };
 
 /* Apply the forecast hourly data to HTML */
 function applyWeatherForecastHourly(jsonDataHourly) {
+
     const imgHourlyPlus0 = document.getElementById("container--img__hourly__now");
     const imgHourlyPlus1 = document.getElementById("container--img__hourly__plus1");
     const imgHourlyPlus2 = document.getElementById("container--img__hourly__plus2");
@@ -91,22 +92,13 @@ function applyWeatherForecastHourly(jsonDataHourly) {
     temperatureHourly4.innerText = Math.round(jsonDataHourly.hourly[4].temp) + "°";
     temperatureHourly5.innerText = Math.round(jsonDataHourly.hourly[5].temp) + "°";
     
-    undisplay();
-};
-
-/* undisplay daily and desc */
-function undisplay() {
-    const navItemDaily = document.getElementById("container--box__daily");
-    const navItemDesc = document.getElementById("container--box__desc");    
-    navItemDaily.style.display = "none";
-    navItemDesc.style.display = "none";
 };
 
 /* Apply the forecast daily data to HTML */
 function applyWeatherForecastDaily(jsonDataDaily) {
 
     displayDay();
-    console.log(jsonDataDaily);
+
     const imgDailyPlus1 = document.getElementById("container--img__daily__plus1");
     const imgDailyPlus2 = document.getElementById("container--img__daily__plus2");
     const imgDailyPlus3 = document.getElementById("container--img__daily__plus3");
@@ -134,6 +126,12 @@ function applyWeatherForecastDaily(jsonDataDaily) {
     temperatureDaily4.innerText = Math.round(jsonDataDaily.daily[4].temp.day) + "°";
     temperatureDaily5.innerText = Math.round(jsonDataDaily.daily[5].temp.day) + "°";
     temperatureDaily6.innerText = Math.round(jsonDataDaily.daily[6].temp.day) + "°";
+};
+
+/* Apply the forecast daily data to HTML */
+function applyWeatherForecastDesc(jsonDataDaily) {
+    
+    
 };
 
 /* Execute the function for Canada keyword as default*/

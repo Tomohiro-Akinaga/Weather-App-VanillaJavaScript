@@ -183,7 +183,8 @@ ul {
     transition: 1s;
 
     &.inactive {
-
+        margin-bottom: 4px;
+        
         & a {
             font-size: 1.5rem;
             color: $nav-color;
