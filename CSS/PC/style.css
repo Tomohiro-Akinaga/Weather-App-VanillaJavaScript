@@ -81,6 +81,10 @@
   font-family: "Poppins";
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-size: cover;
 }
@@ -231,24 +235,23 @@ ul {
   justify-content: space-around;
   font-size: 1.3rem;
 }
-.container--box__forecast__bar ul a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.632);
-}
 
 .container--nav-item {
   padding: 0 20px;
   transition: 1s;
 }
-.container--nav-item.active {
-  border-bottom: solid 4px #fff;
+.container--nav-item.inactive a {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.632);
+}
+.container--nav-item.inactive a:hover {
+  color: #fff;
 }
 .container--nav-item.active a {
+  font-size: 1.5rem;
   color: #fff;
-}
-.container--nav-item:hover a {
-  color: #fff;
+  border-bottom: solid 4px #fff;
+  cursor: default;
 }
 
 .container--box__forecast {

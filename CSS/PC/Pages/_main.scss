@@ -9,6 +9,9 @@
     font-family: "Poppins";
 }
 
+a {
+    text-decoration: none;
+}
 
 body {
     background-size: cover;
@@ -170,11 +173,6 @@ ul {
         justify-content: space-around;
         font-size: 1.3rem;
 
-        & a {
-            text-decoration: none;
-            font-size: 1.5rem;
-            color: $nav-color;
-        }
     }
 }
 
@@ -182,22 +180,25 @@ ul {
     padding: 0 20px;
     transition: 1s;
 
-    &.active {
-        border-bottom: solid 4px #fff;
-        
+    &.inactive {
+
         & a {
-            color: #fff;
+            font-size: 1.5rem;
+            color: $nav-color;
 
-
+            &:hover {
+                color: #fff;
+            }
         }
-
-
     }
+    
+    &.active {
 
-    &:hover {  
         & a {
+            font-size: 1.5rem;
             color: #fff;
-
+            border-bottom: solid 4px #fff;
+            cursor: default;
         }
     }
 }

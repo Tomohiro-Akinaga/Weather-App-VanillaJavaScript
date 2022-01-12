@@ -88,6 +88,9 @@ function applyWeatherForecast(jsonData) {
     temperatureHourly5.innerText = Math.round(jsonData.hourly[5].temp) + "°";
 };
 
+/* When clicked the daily forecast */
+
+
 /* Execute the function for Canada keyword as default*/
 document.addEventListener("DOMContentLoaded", () => {
     callCurrentWeather("Canada");
