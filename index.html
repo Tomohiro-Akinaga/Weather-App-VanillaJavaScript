@@ -37,42 +37,78 @@
             <div class="container--box__forecast__bar">
                 <nav>
                     <ul>
-                        <li class="container--nav-item active"><a href="#">Hourly</a></li>
-                        <li class="container--nav-item inactive"><a href="#">Daily</a></li>
-                        <li class="container--nav-item inactive"><a href="#">Description</a></li>
+                        <li id="container--nav-item__hourly" class="container--nav-item active"><a href="#">Hourly</a></li>
+                        <li id="container--nav-item__daily" class="container--nav-item inactive"><a href="#">Daily</a></li>
+                        <li id="container--nav-item__desc" class="container--nav-item inactive"><a href="#">Description</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="container--box__forecast">
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__now" class="container--time__hourly">Now</p>
-                    <img id="container--img__hourly__now" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__now" class="container--temperature__hourly">6&deg;</p>
+                <div id="container--box__hourly" class="container--box__hourly active">
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__now" class="container--time__hourly">Now</p>
+                        <img id="container--img__hourly__now" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__now" class="container--temperature__hourly">6&deg;</p>
+                    </div>
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__plus1" class="container--time__hourly">1pm</p>
+                        <img id="container--img__hourly__plus1" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__1" class="container--temperature__hourly">6&deg;</p>
+                    </div>
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__plus2" class="container--time__hourly">2pm</p>
+                        <img id="container--img__hourly__plus2" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__2" class="container--temperature__hourly">6&deg;</p>
+                    </div>
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__plus3" class="container--time__hourly">3pm</p>
+                        <img id="container--img__hourly__plus3" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__3" class="container--temperature__hourly">6&deg;</p>
+                    </div>
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__plus4" class="container--time__hourly">4pm</p>
+                        <img id="container--img__hourly__plus4" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__4" class="container--temperature__hourly">6&deg;</p>
+                    </div>
+                    <div class="container--item__hourly">
+                        <p id="container--time__hourly__plus5" class="container--time__hourly">5pm</p>
+                        <img id="container--img__hourly__plus5" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__hourly__5" class="container--temperature__hourly">6&deg;</p>
+                    </div>
                 </div>
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__plus1" class="container--time__hourly">1pm</p>
-                    <img id="container--img__hourly__plus1" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__1" class="container--temperature__hourly">6&deg;</p>
+                <div id="container--box__daily" class="container--box__daily inactive">
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus1" class="container--time__daily">Monday</p>
+                        <img id="container--img__daily__plus1" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__1" class="container--temperature__daily">6&deg;</p>
+                    </div>
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus2" class="container--time__daily">Tuesday</p>
+                        <img id="container--img__daily__plus2" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__2" class="container--temperature__daily">6&deg;</p>
+                    </div>
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus3" class="container--time__daily">Wednesday</p>
+                        <img id="container--img__daily__plus3" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__3" class="container--temperature__daily">6&deg;</p>
+                    </div>
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus4" class="container--time__daily">Tursday</p>
+                        <img id="container--img__daily__plus4" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__4" class="container--temperature__daily">6&deg;</p>
+                    </div>
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus5" class="container--time__daily">Friday</p>
+                        <img id="container--img__daily__plus5" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__5" class="container--temperature__daily">6&deg;</p>
+                    </div>
+                    <div class="container--item__daily">
+                        <p id="container--time__daily__plus6" class="container--time__daily">Saturday</p>
+                        <img id="container--img__daily__plus6" class="container--img__daily" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        <p id ="container--temperature__daily__plus6" class="container--temperature__daily">6&deg;</p>
+                    </div>
                 </div>
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__plus2" class="container--time__hourly">2pm</p>
-                    <img id="container--img__hourly__plus2" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__2" class="container--temperature__hourly">6&deg;</p>
-                </div>
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__plus3" class="container--time__hourly">3pm</p>
-                    <img id="container--img__hourly__plus3" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__3" class="container--temperature__hourly">6&deg;</p>
-                </div>
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__plus4" class="container--time__hourly">4pm</p>
-                    <img id="container--img__hourly__plus4" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__4" class="container--temperature__hourly">6&deg;</p>
-                </div>
-                <div class="container--item__hourly">
-                    <p id="container--time__hourly__plus5" class="container--time__hourly">5pm</p>
-                    <img id="container--img__hourly__plus5" class="container--img__hourly" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                    <p id ="container--temperature__hourly__5" class="container--temperature__hourly">6&deg;</p>
+                <div id="container--box__desc" class="container--box__desc inactive">
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 "use strict";
 
-import { displayTime } from "./displayTime.js";
+import { displayTodayDate } from "./displayTime.js";
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
 import { finishLoading } from "./loading.js";
 import { submitForm } from "./openWeatherAPI.js";
@@ -42,7 +42,7 @@ async function callStateAPI() {
 // Manipulate DOM and Execute async function synchronously
 window.onload = function () {
 
-    displayTime();
+    displayTodayDate();
     const input = document.getElementById("input");
     async function syncFunc() {
         await callCountryAPI();

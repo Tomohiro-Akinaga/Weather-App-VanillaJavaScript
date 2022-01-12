@@ -247,6 +247,9 @@ ul {
 .container--nav-item.inactive a:hover {
   color: #fff;
 }
+.container--nav-item.active {
+  margin-bottom: 4px;
+}
 .container--nav-item.active a {
   font-size: 1.5rem;
   color: #fff;
@@ -254,7 +257,8 @@ ul {
   cursor: default;
 }
 
-.container--box__forecast {
+/* hourly forecast */
+.container--box__hourly {
   display: flex;
   justify-content: space-between;
 }
@@ -268,6 +272,24 @@ ul {
 }
 
 .container--temperature__hourly {
+  font-size: 1.5rem;
+}
+
+/* daily forecast */
+.container--box__daily {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container--item__daily {
+  text-align: center;
+}
+
+.container--time__daily {
+  font-size: 1.5rem;
+}
+
+.container--temperature__daily {
   font-size: 1.5rem;
 }
 

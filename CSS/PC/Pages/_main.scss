@@ -26,13 +26,11 @@ ul {
     padding-top: 30px;
     height: 100vh;
     backdrop-filter: brightness(50%);
-    // backdrop-filter: blur(5px);
     color: #fff;
 }
 
 /* Search Bar */
 .container--form {
-    // border: solid 2px #c9c9c9;
     border-radius: 50px;
     margin: 0px auto  ;
     padding-left: 30px;
@@ -193,6 +191,7 @@ ul {
     }
     
     &.active {
+        margin-bottom: 4px;
 
         & a {
             font-size: 1.5rem;
@@ -203,7 +202,8 @@ ul {
     }
 }
 
-.container--box__forecast {
+/* hourly forecast */
+.container--box__hourly {
     display: flex;
     justify-content: space-between;
 }
@@ -220,9 +220,23 @@ ul {
     font-size: 1.5rem;
 }
 
-// .container--img__hourly {
+/* daily forecast */
+.container--box__daily {
+    display: flex;
+    justify-content: space-between;
+}
 
-// }
+.container--item__daily {
+    text-align: center;
+}
+
+.container--time__daily {
+    font-size: 1.5rem;
+}
+
+.container--temperature__daily {
+    font-size: 1.5rem;
+}
 
 /* Container copyright*/
 .container--copyright {
