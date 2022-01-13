@@ -1,0 +1,309 @@
+@media (max-width:768px) {
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+    @import "_variables.scss";
+
+    /* common */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Poppins";
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        background-size: cover;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    /* Container common */
+    .container {
+        padding-top: 30px;
+        backdrop-filter: brightness(50%);
+        color: #fff;
+        // height: 100vh;
+    }
+
+    /* Search Bar */
+    .container--form {
+        border-radius: 50px;
+        margin: 0px auto  ;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+        width: 280px;
+        background-color: #fff;
+    }
+
+    .container--input {
+        font-size: 1.0rem;
+        width: 230px;
+        height: 40px;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            opacity: 50%;
+            color: black;
+        }
+
+        &:-webkit-autofill {
+            box-shadow: 0 0 0 1000px white inset; 
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            display: none !important;
+        }
+    }
+
+    .container--button {
+        position: absolute;
+        top: 0px;
+        left: 240px;
+        height: 40px;
+        border: none;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background-color: $background-color;
+        width: 40px;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $background-color-hover;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: $background-color-active;
+        }
+    }
+
+    .fa-search {
+        font-size: 1.4rem;
+        font-family: "Font Awesome 5 Free";
+        color: $fa-search;
+    }
+
+    /* Container box */
+    .container--box {
+        margin: 0 100px;
+        // margin-top: 30px;
+    }
+
+    /* Container box current */
+    .container--box__current {
+        display: flex;
+        width: 100%;
+        margin-top: 50px;
+        
+        &__left {
+            text-align: left;
+            width: 50%;
+            // display: flex;
+            // flex-direction: column;
+            // text-align: center;
+        }
+
+        &__right {
+            text-align: right;
+            width: 50%;
+            // display: flex;
+            // flex-direction: column;
+        }
+    }
+
+    .container--city-name {
+        font-size: 4.0rem;
+        line-height: 1em;
+    }
+
+    .container--today-date {
+        font-size: 2.0rem;
+        font-weight: 300;
+        line-height: 1em;
+        margin-top: 20px;
+    }
+
+    .container--img__today {
+        width: 200px;
+        border-radius: 50%;
+        // background-color: rgba(255, 255, 255, 0.146);
+        // clip: rect(50px, 50px, 50px, 50px);
+        // box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .container--temperature {
+        
+        &__today {
+            font-size: 10rem;
+            font-weight: 300;
+            line-height: 1em;
+        }
+
+        &__max-min {
+            line-height: 1em;
+            margin: auto 0;
+        }
+
+        &__max {
+            color: $max-temp-color;
+            font-size: 4.0rem;
+            font-weight: 300;
+            line-height: 1em;
+        }
+
+        &__slash {
+            font-size: 3.0rem;
+            font-weight: 300;
+            line-height: 1em;
+        }
+
+        &__min {
+            color: $min-temp-color;
+            font-size: 4.0rem;
+            font-weight: 300;
+            line-height: 1em;
+        }
+    }
+
+    /* Container box forecast*/
+    .container--box__forecast__bar {
+        margin-top: 80px;
+        margin-bottom: 20px;
+
+        & nav {
+            border-bottom: solid 4px $underbar-color;
+            width: 100%;
+
+        }
+
+        & ul {
+            padding: 0px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            font-size: 1.3rem;
+
+            & li {
+                width: 33%;
+                text-align: center;
+            }
+        }
+    }
+
+    .container--nav-item {
+        padding: 0 20px;
+        transition: 1s;
+
+        &.inactive {
+            margin-bottom: 4px;
+
+            & a {
+                font-size: 1.5rem;
+                color: $nav-color;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        
+        &.active {
+            margin-bottom: 4px;
+
+            & a {
+                font-size: 1.5rem;
+                color: #fff;
+                border-bottom: solid 4px #fff;
+                cursor: default;
+            }
+        }
+    }
+
+    /* hourly forecast */
+    .container--box__hourly {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container--item__hourly {
+        text-align: center;
+    }
+
+    .container--time__hourly {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .container--temperature__hourly {
+        font-size: 1.5rem;
+    }
+
+    /* daily forecast */
+    .container--box__daily {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container--item__daily {
+        text-align: center;
+    }
+
+    .container--time__daily {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .container--temperature__daily {
+        font-size: 1.5rem;
+    }
+
+    /* Description */
+    .container--box__desc {
+        display: flex;
+        flex-direction: column;
+
+        &__upper {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+
+        &__lower {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    .container--item__desc {
+        text-align: center;
+        width: 33%;
+        font-size: 1.5rem;
+
+        &__sub-title {
+            font-weight: 300;
+        }
+    }
+
+
+    /* Container copyright*/
+    .container--copyright {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 5px;
+        color: $copyright;
+    }
+
+}
