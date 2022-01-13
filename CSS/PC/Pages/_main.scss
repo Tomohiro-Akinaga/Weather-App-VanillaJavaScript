@@ -24,9 +24,9 @@ ul {
 /* Container common */
 .container {
     padding-top: 30px;
-    height: 100vh;
     backdrop-filter: brightness(50%);
     color: #fff;
+    height: 100vh;
 }
 
 /* Search Bar */
@@ -93,40 +93,50 @@ ul {
 
 /* Container box */
 .container--box {
-    margin: 0 50px;
+    margin: 0 100px;
+    // margin-top: 30px;
 }
 
 /* Container box current */
 .container--box__current {
     display: flex;
     width: 100%;
+    margin-top: 20px;
     
     &__left {
-        text-align: center;
+        text-align: left;
         width: 50%;
-
+        // display: flex;
+        // flex-direction: column;
+        // text-align: center;
     }
 
     &__right {
-        align-content: flex-start;
         text-align: center;
         width: 50%;
+        display: flex;
+        flex-direction: column;
     }
-
 }
 
 .container--city-name {
     font-size: 4.0rem;
-    flex-wrap: wrap;
+    line-height: 1em;
 }
 
 .container--today-date {
     font-size: 2.0rem;
     font-weight: 300;
+    line-height: 1em;
+    margin-top: 20px;
 }
 
 .container--img__today {
     width: 200px;
+    border-radius: 50%;
+    // background-color: rgba(255, 255, 255, 0.146);
+    // clip: rect(50px, 50px, 50px, 50px);
+    // box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 .container--temperature {
@@ -134,23 +144,32 @@ ul {
     &__today {
         font-size: 10rem;
         font-weight: 300;
+        line-height: 1em;
+    }
+
+    &__max-min {
+        line-height: 1em;
+        margin: auto 0;
     }
 
     &__max {
         color: $max-temp-color;
         font-size: 4.0rem;
         font-weight: 300;
+        line-height: 1em;
     }
 
     &__slash {
         font-size: 3.0rem;
         font-weight: 300;
+        line-height: 1em;
     }
 
     &__min {
         color: $min-temp-color;
         font-size: 4.0rem;
         font-weight: 300;
+        line-height: 1em;
     }
 }
 

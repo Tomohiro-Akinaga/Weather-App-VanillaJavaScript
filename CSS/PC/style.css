@@ -96,10 +96,10 @@ ul {
 /* Container common */
 .container {
   padding-top: 30px;
-  height: 100vh;
   -webkit-backdrop-filter: brightness(50%);
           backdrop-filter: brightness(50%);
   color: #fff;
+  height: 100vh;
 }
 
 /* Search Bar */
@@ -169,55 +169,68 @@ ul {
 
 /* Container box */
 .container--box {
-  margin: 0 50px;
+  margin: 0 100px;
 }
 
 /* Container box current */
 .container--box__current {
   display: flex;
   width: 100%;
+  margin-top: 20px;
 }
 .container--box__current__left {
-  text-align: center;
+  text-align: left;
   width: 50%;
 }
 .container--box__current__right {
-  align-content: flex-start;
   text-align: center;
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container--city-name {
   font-size: 4rem;
-  flex-wrap: wrap;
+  line-height: 1em;
 }
 
 .container--today-date {
   font-size: 2rem;
   font-weight: 300;
+  line-height: 1em;
+  margin-top: 20px;
 }
 
 .container--img__today {
   width: 200px;
+  border-radius: 50%;
 }
 
 .container--temperature__today {
   font-size: 10rem;
   font-weight: 300;
+  line-height: 1em;
+}
+.container--temperature__max-min {
+  line-height: 1em;
+  margin: auto 0;
 }
 .container--temperature__max {
   color: #FF6047;
   font-size: 4rem;
   font-weight: 300;
+  line-height: 1em;
 }
 .container--temperature__slash {
   font-size: 3rem;
   font-weight: 300;
+  line-height: 1em;
 }
 .container--temperature__min {
   color: #47B9FF;
   font-size: 4rem;
   font-weight: 300;
+  line-height: 1em;
 }
 
 /* Container box forecast*/

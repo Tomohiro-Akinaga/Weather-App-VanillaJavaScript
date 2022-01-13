@@ -7,8 +7,9 @@ window.addEventListener("load", () => {
     navItemHoulyBar.addEventListener("click", clickHourly);
     navItemDailyBar.addEventListener("click", clickDaily);
     navItemDescBar.addEventListener("click", clickDesc);
-
+    
     hide();
+
 });
 
 function hide() {
@@ -44,7 +45,7 @@ function clickDaily() {
     const navItemHourly = document.getElementById("container--box__hourly");
     const navItemDaily = document.getElementById("container--box__daily");
     const navItemDesc = document.getElementById("container--box__desc");
-
+    
     navItemHourly.style.display = "none";   
     navItemDaily.style.display = "flex";
     navItemDesc.style.display = "none";
@@ -52,7 +53,7 @@ function clickDaily() {
     const navItemHoulyBar = document.getElementById("container--nav-item__hourly");
     const navItemDailyBar = document.getElementById("container--nav-item__daily");
     const navItemDescBar = document.getElementById("container--nav-item__desc");
-
+    
     navItemHoulyBar.classList.remove("active");
     navItemHoulyBar.classList.add("inactive");
     navItemDailyBar.classList.remove("inactive");

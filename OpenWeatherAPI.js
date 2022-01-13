@@ -36,7 +36,7 @@ async function callCurrentWeather(text) {
 
 
 function applyCurrentWeahter(cityText, jsonData) {
-
+    console.log(jsonData);
     /* Manipulate DOM */
     const containerCityName = document.getElementById("container--city-name");
     const containerImgToday = document.getElementById("container--img__today");
@@ -139,9 +139,7 @@ function applyWeatherForecastDaily(jsonDataDaily) {
 
 /* Apply the forecast description data to HTML */
 function applyWeatherForecastDesc(jsonDataDesc) {
-
     console.log(jsonDataDesc);
-
     const itemDescText1 = document.getElementById("container--item__desc__text__1");
     const itemDescText2 = document.getElementById("container--item__desc__text__2");
     const itemDescText3 = document.getElementById("container--item__desc__text__3");
