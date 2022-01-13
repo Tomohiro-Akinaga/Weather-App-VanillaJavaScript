@@ -305,7 +305,6 @@ ul {
 /* Description */
 .container--box__desc {
   display: flex;
-  height: 40vh;
   flex-direction: column;
 }
 .container--box__desc__upper {
@@ -321,13 +320,10 @@ ul {
 .container--item__desc {
   text-align: center;
   width: 33%;
+  font-size: 1.5rem;
 }
 .container--item__desc__sub-title {
-  font-size: 1.5rem;
   font-weight: 300;
-}
-.container--item__desc__text {
-  font-size: 1.5rem;
 }
 
 /* Container copyright*/

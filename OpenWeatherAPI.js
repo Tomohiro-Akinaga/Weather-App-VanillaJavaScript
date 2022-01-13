@@ -5,12 +5,15 @@ import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
 
 /* When clicked form */
 export function submitForm() {
+
     const form = document.getElementById("form");
     form.addEventListener("submit", getFormResult);
+
 };
 
 /* After clicked form */
 function getFormResult(event) {
+
     event.preventDefault();
     const cityName = input.value;
     if ( cityName.length === 0 ) {
@@ -19,17 +22,21 @@ function getFormResult(event) {
         callCurrentWeather(cityName);
         fetchBackgroundImage(cityName);
     }
+
 };
 
 /* Call the current weather API */
 async function callCurrentWeather(text) {
+
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=7d20d69e5d5abc8385c9ae6416019816`;
     const currentWeatherData = await fetch(currentWeatherUrl).then(res => res.json());
     applyCurrentWeahter(text, currentWeatherData);
+
 };
 
 
 function applyCurrentWeahter(cityText, jsonData) {
+
     /* Manipulate DOM */
     const containerCityName = document.getElementById("container--city-name");
     const containerImgToday = document.getElementById("container--img__today");
@@ -48,17 +55,19 @@ function applyCurrentWeahter(cityText, jsonData) {
     const lat = jsonData.coord.lat;
     const lon = jsonData.coord.lon;
 
-    /* Call the hourly forecast */
+    /* Call the weather forecast for hourly, daily, description */
     callWeatherForecast(lat, lon);
 };
 
 /* Call the weather forecast API for hourly*/
 async function callWeatherForecast(latitude, longitude) {
+
     const weatherForecastUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=7d20d69e5d5abc8385c9ae6416019816";
     const weatherForecastData = await fetch(weatherForecastUrl).then(res => res.json());
     applyWeatherForecastHourly(weatherForecastData);
     applyWeatherForecastDaily(weatherForecastData);
     applyWeatherForecastDesc(weatherForecastData);
+
 };
 
 /* Apply the forecast hourly data to HTML */
@@ -128,15 +137,50 @@ function applyWeatherForecastDaily(jsonDataDaily) {
     temperatureDaily6.innerText = Math.round(jsonDataDaily.daily[6].temp.day) + "°";
 };
 
-/* Apply the forecast daily data to HTML */
-function applyWeatherForecastDesc(jsonDataDaily) {
+/* Apply the forecast description data to HTML */
+function applyWeatherForecastDesc(jsonDataDesc) {
+
+    console.log(jsonDataDesc);
+
+    const itemDescText1 = document.getElementById("container--item__desc__text__1");
+    const itemDescText2 = document.getElementById("container--item__desc__text__2");
+    const itemDescText3 = document.getElementById("container--item__desc__text__3");
+    const itemDescText4 = document.getElementById("container--item__desc__text__4");
+    const itemDescText5 = document.getElementById("container--item__desc__text__5");
+    const itemDescText6 = document.getElementById("container--item__desc__text__6");
     
+    const sunriseTimeUnix = jsonDataDesc.current.sunrise;
+    const sunriseTime = new Date(sunriseTimeUnix * 1000);
+    const sunriseHours = sunriseTime.getHours();
+    const sunriseMinute = sunriseTime.getMinutes();
     
+    if ( sunriseMinute < 9 ) {
+        itemDescText1.innerText = sunriseHours < 12 ? `${sunriseHours}:${sunriseMinute}am` :  `${sunriseHours-12}:0${sunriseMinute}pm`;
+    } else {
+        itemDescText1.innerText = sunriseHours < 12 ? `${sunriseHours}:${sunriseMinute}am` :  `${sunriseHours-12}:${sunriseMinute}pm`;
+    };
+
+    const sunsetTimeUnix = jsonDataDesc.current.sunset;
+    const sunsetTime = new Date(sunsetTimeUnix * 1000);
+    const sunsetHours = sunsetTime.getHours();
+    const sunsetMinute = sunsetTime.getMinutes();
+
+    if ( sunsetMinute < 9 ) {
+        itemDescText2.innerText = sunsetHours < 12 ? `${sunsetHours}:${sunsetMinute}am` :  `${sunsetHours-12}:0${sunsetMinute}pm`;
+    } else {
+        itemDescText2.innerText = sunsetHours < 12 ? `${sunsetHours}:${sunsetMinute}am` :  `${sunsetHours-12}:${sunsetMinute}pm`;
+    };
+
+    itemDescText3.innerText = jsonDataDesc.current.pressure + " hPa";
+    itemDescText4.innerText = jsonDataDesc.current.humidity + "%";
+    itemDescText5.innerText = jsonDataDesc.current.clouds + "%";
+    itemDescText6.innerText = Math.round(jsonDataDesc.current.feels_like) + "°";
+
 };
 
 /* Execute the function for Canada keyword as default*/
 document.addEventListener("DOMContentLoaded", () => {
-    callCurrentWeather("Canada");
+    callCurrentWeather("British Columbia");
 });
 
 

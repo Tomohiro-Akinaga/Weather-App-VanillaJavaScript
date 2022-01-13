@@ -57,7 +57,7 @@ export function displayDay() {
     const day5Index = day5.getDay();
     const day6Index = day6.getDay();
 
-    const dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Tursday", "Friday", "Saturday"];
+    const dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const dayPlus1Text = document.getElementById("container--time__daily__plus1");
     const dayPlus2Text = document.getElementById("container--time__daily__plus2");
