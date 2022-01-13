@@ -101,7 +101,7 @@ ul {
 .container--box__current {
     display: flex;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
     
     &__left {
         text-align: left;
@@ -175,6 +175,7 @@ ul {
 
 /* Container box forecast*/
 .container--box__forecast__bar {
+    margin-top: 80px;
     margin-bottom: 20px;
 
     & nav {
