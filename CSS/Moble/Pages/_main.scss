@@ -1,50 +1,51 @@
-@media (max-width:768px) {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import "_variables.scss";
 
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-    @import "_variables.scss";
+/* common */
 
-    /* common */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins";
+    color: #fff;
+}
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        font-family: "Poppins";
-    }
+a {
+    text-decoration: none;
+}
 
-    a {
-        text-decoration: none;
-    }
+body {
+    background-size: cover;
+}
 
-    body {
-        background-size: cover;
-    }
+ul {
+    list-style: none;
+}
 
-    ul {
-        list-style: none;
-    }
+@media screen and (max-width: 767px) {
 
     /* Container common */
     .container {
-        padding-top: 30px;
+        padding: 30px;
         backdrop-filter: brightness(50%);
-        color: #fff;
-        // height: 100vh;
+        height: 100vh;
+        width: 100vw;
     }
 
     /* Search Bar */
     .container--form {
         border-radius: 50px;
         margin: 0px auto  ;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 100px;
         position: relative;
-        width: 280px;
+        width: 500px;
         background-color: #fff;
     }
 
     .container--input {
-        font-size: 1.0rem;
-        width: 230px;
+        font-size: 1.2rem;
+        width: 100%;
         height: 40px;
         border: none;
         outline: none;
@@ -66,7 +67,7 @@
     .container--button {
         position: absolute;
         top: 0px;
-        left: 240px;
+        left: 415px;
         height: 40px;
         border: none;
         border-top-right-radius: 50px;
@@ -74,7 +75,7 @@
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         background-color: $background-color;
-        width: 40px;
+        width: 86px;
         transition: 0.2s;
 
         &:hover {
@@ -93,83 +94,67 @@
         color: $fa-search;
     }
 
-    /* Container box */
-    .container--box {
-        margin: 0 100px;
-        // margin-top: 30px;
-    }
-
     /* Container box current */
     .container--box__current {
         display: flex;
-        width: 100%;
         margin-top: 50px;
+        flex-direction: column;
         
         &__left {
-            text-align: left;
-            width: 50%;
-            // display: flex;
-            // flex-direction: column;
-            // text-align: center;
+            text-align: center;
         }
 
         &__right {
-            text-align: right;
-            width: 50%;
-            // display: flex;
-            // flex-direction: column;
+            margin-top: 30px;
+            display: flex;
         }
     }
 
     .container--city-name {
-        font-size: 4.0rem;
+        font-size: 3.0rem;
         line-height: 1em;
     }
 
     .container--today-date {
-        font-size: 2.0rem;
+        font-size: 1.5rem;
         font-weight: 300;
         line-height: 1em;
         margin-top: 20px;
     }
 
-    .container--img__today {
-        width: 200px;
-        border-radius: 50%;
-        // background-color: rgba(255, 255, 255, 0.146);
-        // clip: rect(50px, 50px, 50px, 50px);
-        // box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.2);
-    }
-
     .container--temperature {
         
         &__today {
-            font-size: 10rem;
+            font-size: 5.0rem;
             font-weight: 300;
             line-height: 1em;
+            text-align: center;
+            width: 50%;
         }
 
         &__max-min {
             line-height: 1em;
             margin: auto 0;
+            text-align: center;
+            width: 50%;
         }
 
         &__max {
             color: $max-temp-color;
-            font-size: 4.0rem;
+            font-size: 2.0rem;
             font-weight: 300;
             line-height: 1em;
         }
 
         &__slash {
-            font-size: 3.0rem;
+            font-size: 1.5rem;
             font-weight: 300;
             line-height: 1em;
         }
 
         &__min {
             color: $min-temp-color;
-            font-size: 4.0rem;
+            font-size: 2.0rem;
             font-weight: 300;
             line-height: 1em;
         }
@@ -229,10 +214,15 @@
         }
     }
 
+    .container--box__forecast {
+        margin-top: 30px;
+        overflow: scroll;
+    }
+
     /* hourly forecast */
     .container--box__hourly {
         display: flex;
-        justify-content: space-between;
+        overflow: scroll;
     }
 
     .container--item__hourly {
@@ -248,6 +238,9 @@
         font-size: 1.5rem;
     }
 
+    .container--img__hourly {
+        width: 110px;
+    }
     /* daily forecast */
     .container--box__daily {
         display: flex;

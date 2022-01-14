@@ -21,6 +21,8 @@ ul {
     list-style: none;
 }
 
+@media screen and (min-width: 768px) {
+    
 /* Container common */
 .container {
     padding-top: 30px;
@@ -230,7 +232,7 @@ ul {
 /* hourly forecast */
 .container--box__hourly {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .container--item__hourly {
@@ -249,7 +251,7 @@ ul {
 /* daily forecast */
 .container--box__daily {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .container--item__daily {
@@ -272,13 +274,13 @@ ul {
 
     &__upper {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         margin-bottom: 20px;
     }
 
     &__lower {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
 }
@@ -302,4 +304,5 @@ ul {
     position: fixed;
     bottom: 5px;
     color: $copyright;
+}
 }
