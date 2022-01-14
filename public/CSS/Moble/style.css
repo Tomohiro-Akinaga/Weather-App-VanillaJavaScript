@@ -238,9 +238,7 @@ ul {
   .container--box__forecast__bar ul {
     padding: 0px;
     display: flex;
-    width: 100%;
     justify-content: space-around;
-    font-size: 1.3rem;
   }
   .container--box__forecast__bar ul li {
     text-align: center;
@@ -253,7 +251,7 @@ ul {
     margin-bottom: 4px;
   }
   .container--nav-item.inactive a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.632);
   }
   .container--nav-item.inactive a:hover {
@@ -263,7 +261,7 @@ ul {
     margin-bottom: 4px;
   }
   .container--nav-item.active a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #fff;
     border-bottom: solid 4px #fff;
     cursor: default;

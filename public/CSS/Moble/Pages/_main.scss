@@ -174,9 +174,7 @@ ul {
         & ul {
             padding: 0px;
             display: flex;
-            width: 100%;
             justify-content: space-around;
-            font-size: 1.3rem;
 
             & li {
                 text-align: center;
@@ -191,7 +189,7 @@ ul {
             margin-bottom: 4px;
 
             & a {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 color: $nav-color;
 
                 &:hover {
@@ -204,7 +202,7 @@ ul {
             margin-bottom: 4px;
 
             & a {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 color: #fff;
                 border-bottom: solid 4px #fff;
                 cursor: default;
