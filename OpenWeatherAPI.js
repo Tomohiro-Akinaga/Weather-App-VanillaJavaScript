@@ -36,17 +36,17 @@ async function callCurrentWeather(text) {
 
 
 function applyCurrentWeahter(cityText, jsonData) {
-    console.log(jsonData);
+
     /* Manipulate DOM */
     const containerCityName = document.getElementById("container--city-name");
-    const containerImgToday = document.getElementById("container--img__today");
+    // const containerImgToday = document.getElementById("container--img__today");
     const containerTemperatureToday = document.getElementById("container--temperature__today");
     const containerTemperatureMax = document.getElementById("container--temperature__max");
     const containerTemperatureMin = document.getElementById("container--temperature__min");
 
     /* Apply the current data to HTML */
     containerCityName.innerText= cityText;
-    containerImgToday.src = "http://openweathermap.org/img/wn/" + jsonData.weather[0].icon + "@2x.png";
+    // containerImgToday.src = "http://openweathermap.org/img/wn/" + jsonData.weather[0].icon + "@2x.png";
     containerTemperatureToday.innerText = Math.round(jsonData.main.temp) + "°";
     containerTemperatureMax.innerText = Math.round(jsonData.main.temp_max) + "°";
     containerTemperatureMin.innerText = Math.round(jsonData.main.temp_min) + "°";
@@ -139,7 +139,7 @@ function applyWeatherForecastDaily(jsonDataDaily) {
 
 /* Apply the forecast description data to HTML */
 function applyWeatherForecastDesc(jsonDataDesc) {
-    console.log(jsonDataDesc);
+    
     const itemDescText1 = document.getElementById("container--item__desc__text__1");
     const itemDescText2 = document.getElementById("container--item__desc__text__2");
     const itemDescText3 = document.getElementById("container--item__desc__text__3");

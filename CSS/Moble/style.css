@@ -285,7 +285,7 @@ ul {
   }
 
   .container--time__hourly {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
   }
 
@@ -300,7 +300,6 @@ ul {
   /* daily forecast */
   .container--box__daily {
     display: flex;
-    justify-content: space-between;
   }
 
   .container--item__daily {
@@ -308,12 +307,16 @@ ul {
   }
 
   .container--time__daily {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
   }
 
   .container--temperature__daily {
     font-size: 1.5rem;
+  }
+
+  .container--img__daily {
+    width: 110px;
   }
 
   /* Description */
@@ -334,20 +337,10 @@ ul {
   .container--item__desc {
     text-align: center;
     width: 33%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .container--item__desc__sub-title {
     font-weight: 300;
-  }
-
-  /* Container copyright*/
-  .container--copyright {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    bottom: 5px;
-    color: rgba(255, 255, 255, 0.639);
   }
 }
 /*# sourceMappingURL=style.css.map */
