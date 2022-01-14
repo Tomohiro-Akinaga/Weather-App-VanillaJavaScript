@@ -113,6 +113,7 @@ ul {
     position: relative;
     width: 500px;
     background-color: #fff;
+    width: 320px;
   }
 
   .container--input {
@@ -144,7 +145,7 @@ ul {
   .container--button {
     position: absolute;
     top: 0px;
-    left: 415px;
+    left: 235px;
     height: 40px;
     border: none;
     border-top-right-radius: 50px;
@@ -210,18 +211,18 @@ ul {
   }
   .container--temperature__max {
     color: #FF6047;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 300;
     line-height: 1em;
   }
   .container--temperature__slash {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 1em;
   }
   .container--temperature__min {
     color: #47B9FF;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 300;
     line-height: 1em;
   }

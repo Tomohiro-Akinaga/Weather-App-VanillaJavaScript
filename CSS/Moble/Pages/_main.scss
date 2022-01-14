@@ -41,6 +41,7 @@ ul {
         position: relative;
         width: 500px;
         background-color: #fff;
+        width: 320px;
     }
 
     .container--input {
@@ -67,7 +68,7 @@ ul {
     .container--button {
         position: absolute;
         top: 0px;
-        left: 415px;
+        left: 235px;
         height: 40px;
         border: none;
         border-top-right-radius: 50px;
@@ -141,20 +142,20 @@ ul {
 
         &__max {
             color: $max-temp-color;
-            font-size: 2.0rem;
+            font-size: 3.0rem;
             font-weight: 300;
             line-height: 1em;
         }
 
         &__slash {
-            font-size: 1.5rem;
+            font-size: 2.0rem;
             font-weight: 300;
             line-height: 1em;
         }
 
         &__min {
             color: $min-temp-color;
-            font-size: 2.0rem;
+            font-size: 3.0rem;
             font-weight: 300;
             line-height: 1em;
         }
