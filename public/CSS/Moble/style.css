@@ -173,7 +173,7 @@ ul {
   /* Container box current */
   .container--box__current {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     flex-direction: column;
   }
   .container--box__current__left {

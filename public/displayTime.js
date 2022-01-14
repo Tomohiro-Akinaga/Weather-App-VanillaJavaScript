@@ -23,11 +23,11 @@ function displayTime() {
     const timePlus4 = document.getElementById("container--time__hourly__plus4");
     const timePlus5 = document.getElementById("container--time__hourly__plus5"); 
     
-    timePlus1.innerText = (time + 1) < 12 ? (time + 1) + "am" : (time + 1) -12 + "pm"; 
-    timePlus2.innerText = (time + 2) < 12 ? (time + 2) + "am" : (time + 2) -12 + "pm"; 
-    timePlus3.innerText = (time + 3) < 12 ? (time + 3) + "am" : (time + 3) -12 + "pm"; 
-    timePlus4.innerText = (time + 4) < 12 ? (time + 4) + "am" : (time + 4) -12 + "pm"; 
-    timePlus5.innerText = (time + 5) < 12 ? (time + 5) + "am" : (time + 5) -12 + "pm";   
+    timePlus1.innerText = time < 12 ? (time + 1) + "am" : (time + 1 - 12) + "pm"; 
+    timePlus2.innerText = time < 12 ? (time + 2) + "am" : (time + 2 - 12) + "pm"; 
+    timePlus3.innerText = time < 12 ? (time + 3) + "am" : (time + 3 - 12) + "pm"; 
+    timePlus4.innerText = time < 12 ? (time + 4) + "am" : (time + 4 - 12) + "pm"; 
+    timePlus5.innerText = time < 12 ? (time + 5) + "am" : (time + 5 - 12) + "pm";   
 };
 
 export function displayDay() {
