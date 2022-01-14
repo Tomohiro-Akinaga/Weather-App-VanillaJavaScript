@@ -2,8 +2,8 @@
 
 import { displayTodayDate } from "./displayTime.js";
 import { fetchBackgroundImage } from "./fetchBackgroundImage.js";
-import { finishLoading } from "./loading.js";
-import { submitForm } from "./openWeatherAPI.js";
+import { finishLoading } from "../loading.js";
+import { submitForm } from "../openWeatherAPI.js";
 
 // Example Usage of Country State City API in https://countrystatecity.in/docs/api/all-countries/
 const headers = new Headers();
